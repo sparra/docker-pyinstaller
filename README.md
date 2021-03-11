@@ -1,16 +1,18 @@
 # PyInstaller Docker Images
 
-**cdrx/pyinstaller-linux** and **cdrx/pyinstaller-windows** are a pair of Docker containers to ease compiling Python applications to binaries / exe files.
+**batonogov/pyinstaller-linux** and **batonogov/pyinstaller-windows** are a pair of Docker containers to ease compiling Python applications to binaries / exe files.
 
-Current PyInstaller version used: 3.6.
+Current PyInstaller version used: 
+- 4.2 for Python 3.9 
+- 3.6 for Python 2.7
 
 ## Tags
 
-`cdrx/pyinstaller-linux` and `cdrx/pyinstaller-windows` both have two tags, `:python2` and `:python3` which you can use depending on the requirements of your project. `:latest` points to `:python3`
+`batonogov/pyinstaller-linux` and `batonogov/pyinstaller-windows` both have two tags, `:python3` and `:python2` which you can use depending on the requirements of your project. `:latest` points to `:python3`
+
+The `:python3` tag runs Python 3.9.
 
 The `:python2` tags run Python 2.7.
-
-The `:python3` tag runs Python 3.7.
 
 ## Usage
 
@@ -25,13 +27,13 @@ If the `src` folder has a `requirements.txt` file, the packages will be installe
 For example, in the folder that has your source code, `.spec` file and `requirements.txt`:
 
 ```
-docker run -v "$(pwd):/src/" cdrx/pyinstaller-windows
+docker run -v "$(pwd):/src/" batonogov/pyinstaller-windows
 ```
 
 will build your PyInstaller project into `dist/windows/`. The `.exe` file will have the same name as your `.spec` file.
 
 ```
-docker run -v "$(pwd):/src/" cdrx/pyinstaller-linux
+docker run -v "$(pwd):/src/" batonogov/pyinstaller-linux
 ```
 
 will build your PyInstaller project into `dist/linux/`. The binary will have the same name as your `.spec` file.
@@ -41,20 +43,20 @@ will build your PyInstaller project into `dist/linux/`. The binary will have the
 You'll need to supply a custom command to Docker to install system pacakges. Something like:
 
 ```
-docker run -v "$(pwd):/src/" --entrypoint /bin/sh cdrx/pyinstaller-linux -c "apt-get update -y && apt-get install -y wget && /entrypoint.sh"
+docker run -v "$(pwd):/src/" --entrypoint /bin/sh batonogov/pyinstaller-linux -c "apt-get update -y && apt-get install -y wget && /entrypoint.sh"
 ```
 
 Replace `wget` with the dependencies / package(s) you need to install.
 
 ##### How do I generate a .spec file?
 
-`docker run -v "$(pwd):/src/" cdrx/pyinstaller-linux "pyinstaller your-script.py"`
+`docker run -v "$(pwd):/src/" batonogov/pyinstaller-linux "pyinstaller your-script.py"`
 
 will generate a `spec` file for `your-script.py` in your current working directory. See the PyInstaller docs for more information.
 
 ##### How do I change the PyInstaller version used?
 
-Add `pyinstaller=3.1.1` to your `requirements.txt`.
+Add `pyinstaller=4.1` to your `requirements.txt`.
 
 ##### Is it possible to use a package mirror?
 
@@ -102,6 +104,10 @@ Updated PyInstaller to version 3.4
 Added a 32bit package, thank you @danielguardicore
 Updated PyInstaller to version 3.6
 
+#### [2.0] - 2021-03-11
+Drop support for Python 2.7
+Updated Python 3 to version 3.9.2
+Updated PyInstaller to version 4.2
 
 ## License
 
