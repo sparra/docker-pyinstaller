@@ -106,7 +106,7 @@ Updated PyInstaller to version 3.6
 
 #### [2.0] - 2021-03-11
 Drop support for Python 2.7
-Updated Python 3 to version 3.9.2
+Updated Python 3 to version 3.9
 Updated PyInstaller to version 4.2
 
 ## License
