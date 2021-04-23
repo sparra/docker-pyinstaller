@@ -97,17 +97,20 @@ Added Python 3.6 on Windows, thanks to @jameshilliard
 Bumped Python version to 3.6 on Linux, thank you @itouch5000
 
 #### [1.8] - 2019-01-15
-Build using an older version of glibc to improve compatibility, thank you @itouch5000
-Updated PyInstaller to version 3.4
+- Build using an older version of glibc to improve compatibility, thank you @itouch5000
+- Updated PyInstaller to version 3.4
 
 #### [1.9] - 2020-01-14
-Added a 32bit package, thank you @danielguardicore
-Updated PyInstaller to version 3.6
+- Added a 32bit package, thank you @danielguardicore
+- Updated PyInstaller to version 3.6
 
 #### [2.0] - 2021-03-11
-Drop support for Python 2.7
-Updated Python 3 to version 3.9
-Updated PyInstaller to version 4.2
+- Drop support for Python 2.7
+- Updated Python 3 to version 3.9
+- Updated PyInstaller to version 4.2
+
+#### [2.1] - 2021-04-23
+- Update Ubuntu 16:04 -> 20:04
 
 ## License
 
