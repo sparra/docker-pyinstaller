@@ -1,4 +1,4 @@
-name: ci
+name: build_win64
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           push: true
-          tags: user/app:latest
+          tags: batonogov/pyinstaller-windows:dev
           secrets: |
             GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
       -
