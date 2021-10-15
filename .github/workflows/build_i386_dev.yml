@@ -1,4 +1,4 @@
-name: build_win64
+name: build_i386_dev
 
 on:
   push:
