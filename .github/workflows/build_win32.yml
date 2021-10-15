@@ -27,5 +27,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: batonogov/pyinstaller-windows:latest
+          tags: batonogov/pyinstaller-windows:win32
           file: Dockerfile-py3-win32
