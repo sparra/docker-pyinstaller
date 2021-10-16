@@ -15,7 +15,6 @@ set -e
 # and don't allow that much flexibility to mount volumes
 WORKDIR=${SRCDIR:-/src}
 
-#
 # In case the user specified a custom URL for PYPI, then use
 # that one, instead of the default one.
 #
