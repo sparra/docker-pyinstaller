@@ -4,15 +4,13 @@
 
 Current PyInstaller version used: 
 - 4.5.1 for Python 3.9.7
-- 3.6 for Python 2.7
 
 ## Tags
 
-`batonogov/pyinstaller-linux` and `batonogov/pyinstaller-windows` both have two tags, `:python3` and `:python2` which you can use depending on the requirements of your project. `:latest` points to `:python3`
+`batonogov/pyinstaller-linux` both have few tags `:latest`, `:dev`, `:i386`, `:i386dev`. 
+`batonogov/pyinstaller-windows` both have few tags `:latest`, `:dev`, `:win32`, `:win32dev`.
 
-The `:python3` tag runs Python 3.9.7.
-
-The `:python2` tags run Python 2.7.
+The `:latest` tag runs Python 3.9.7 x86-64.
 
 ## Usage
 
@@ -30,13 +28,13 @@ For example, in the folder that has your source code, `.spec` file and `requirem
 docker run -v "$(pwd):/src/" batonogov/pyinstaller-windows
 ```
 
-will build your PyInstaller project into `dist/windows/`. The `.exe` file will have the same name as your `.spec` file.
+will build your PyInstaller project into `dist/`. The `.exe` file will have the same name as your `.spec` file.
 
 ```
 docker run -v "$(pwd):/src/" batonogov/pyinstaller-linux
 ```
 
-will build your PyInstaller project into `dist/linux/`. The binary will have the same name as your `.spec` file.
+will build your PyInstaller project into `dist/`. The binary will have the same name as your `.spec` file.
 
 ##### How do I install system libraries or dependencies that my Python packages need?
 
@@ -113,6 +111,11 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 - Update Ubuntu 16:04 -> 20:04 for win64 and win32
 - Updated PyInstaller 4.2 -> 4.5.1
 - Updated Python 3.9.5 -> 3.9.7
+
+#### [2.2] - 2021-10-16
+- Update Ubuntu 12:04 -> 20:04 for i386 and amd64
+- Update openssl 1.0.2u -> 1.1.1l for i386 and amd64
+- Deleted Python 2 Dockerfiles
 
 ## License
 
