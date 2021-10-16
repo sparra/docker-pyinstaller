@@ -1,5 +1,8 @@
 #!/bin/bash -i
 
+# Add path
+echo 'export PATH=$PATH:$HOME/.pyenv/versions/$PYTHON_VERSION/bin/' >> ~/.bashrc
+
 # Fail on errors.
 set -e
 
