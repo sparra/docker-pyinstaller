@@ -118,8 +118,8 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 - Deleted Python 2 Dockerfiles
 - Deleted 32 bit Dockerfiles
 
-#### [2.3] - 2021-10-17
-- UUpdated Python 3.9.7 -> 3.10.0
+#### [2.3] - Upcoming Release
+- Updated Python 3.9.7 -> 3.10.0
 
 ## License
 
