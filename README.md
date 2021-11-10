@@ -120,7 +120,7 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 
 #### [2.3] - Upcoming Release
 - Updated Python 3.9.7 -> 3.10.0
-- Update Pyinstaler 4.5.1 -> 4.6.0
+- Update Pyinstaler 4.5.1 -> 4.7.0
 
 ## License
 
