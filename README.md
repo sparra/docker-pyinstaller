@@ -7,8 +7,8 @@ Current PyInstaller version used:
 
 ## Tags
 
-`batonogov/pyinstaller-linux` both have few tags `:latest`, `:dev`, `python-3.8`, `python-3.9`. 
-`batonogov/pyinstaller-windows` both have few tags `:latest`, `:dev` `python-3.8`, `python-3.9`.
+`batonogov/pyinstaller-linux` both have few tags `:latest`, `:dev`, `python_3.8`, `python_3.9`. 
+`batonogov/pyinstaller-windows` both have few tags `:latest`, `:dev`, `python_3.8`, `python_3.9`.
 
 The `:latest` tag runs Python 3.10.0 x86-64.
 
