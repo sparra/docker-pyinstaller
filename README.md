@@ -108,12 +108,12 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 - Updated PyInstaller to version 4.2
 
 #### [2.1] - 2021-09-24
-- Updated Ubuntu 16:04 -> 20:04 for win64 and win32
+- Updated Ubuntu 16.04 -> 20.04 for win64 and win32
 - Updated PyInstaller 4.2 -> 4.5.1
 - Updated Python 3.9.5 -> 3.9.7
 
 #### [2.2] - 2021-10-16
-- Updated Ubuntu 12:04 -> 20:04 for amd64
+- Updated Ubuntu 12.04 -> 20.04 for amd64
 - Updated openssl 1.0.2u -> 1.1.1l for amd64
 - Deleted Python 2 Dockerfiles
 - Deleted 32 bit Dockerfiles
@@ -125,6 +125,9 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 #### [2.4] - 2021-12-23
 - Updated Python 3.10.0 -> 3.10.1
 - Updated OpenSSL 1.1.1l -> 1.1.1m
+
+#### [2.5] - upcoming
+- Updated Ubuntu 20.04 -> 22.04
 
 ## License
 
