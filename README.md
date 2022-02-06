@@ -128,6 +128,7 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 
 #### [2.5] - upcoming
 - Updated Ubuntu 20.04 -> 22.04
+- Updated Python 3.10.1 -> 3.10.2
 - Updated Pyinstaler 4.7.0 -> 4.9.0
 
 ## License
