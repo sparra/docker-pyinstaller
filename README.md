@@ -132,6 +132,9 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 - Updated Pyinstaler 4.7.0 -> 4.10
 - Updated OpenSSL 1.1.1m -> 1.1.1n
 
+#### [2.5] - upcoming
+- Updated Ubuntu 20.04 -> 22.04 for win64
+
 ## License
 
 MIT
