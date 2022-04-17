@@ -4,7 +4,7 @@ SHELL ["/bin/bash", "-i", "-c"]
 LABEL maintainer="batonogov@icloud.com"
 
 ARG PYTHON_VERSION=3.10.4
-ARG PYINSTALLER_VERSION=4.10
+ARG PYINSTALLER_VERSION=5.0
 ARG OPENSSL_VERSION=1.1.1n
 
 ENV PYPI_URL=https://pypi.python.org/
