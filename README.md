@@ -3,7 +3,7 @@
 **batonogov/pyinstaller-linux** and **batonogov/pyinstaller-windows** are a pair of Docker containers to ease compiling Python applications to binaries / exe files.
 
 Current PyInstaller version used: 
-- 5.0.1 for Python 3.10.4
+- 5.1.0 for Python 3.10.4
 
 ## Tags
 
@@ -132,9 +132,9 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 - Updated Pyinstaler 4.7.0 -> 4.10
 - Updated OpenSSL 1.1.1m -> 1.1.1n
 
-#### [2.6] - upcoming
-- Updated Ubuntu 20.04 -> 22.04 for win64
+#### [2.6] - 2022-05-18
 - Updated Pyinstaler 4.10 -> 5.1.0
+- Updated OpenSSL 1.1.1n -> 1.1.1o
 
 ## License
 
