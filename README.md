@@ -144,6 +144,7 @@ Bumped Python version to 3.6 on Linux, thank you @itouch5000
 #### [2.8] - Upcoming
 - Updated OpenSSL 1.1.1p -> 1.1.1q
 - Updated Pyinstaler 5.2.0 -> 5.3.0
+- Updated Python 3.10.5 -> 3.10.6
 
 ## License
 
