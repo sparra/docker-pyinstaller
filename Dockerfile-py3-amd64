@@ -3,7 +3,7 @@ SHELL ["/bin/bash", "-i", "-c"]
 
 LABEL maintainer="batonogov@icloud.com"
 
-ARG PYTHON_VERSION=3.10.6
+ARG PYTHON_VERSION=3.10.7
 ARG PYINSTALLER_VERSION=5.3.0
 ARG OPENSSL_VERSION=1.1.1q
 

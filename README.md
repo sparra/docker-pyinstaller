@@ -4,14 +4,14 @@
 
 Current PyInstaller version used:
 
-- 5.3.0 for Python 3.10.6
+- 5.3.0 for Python 3.10.7
 
 ## Tags
 
 `batonogov/pyinstaller-linux` both have few tags `:latest`, `:dev`.
 `batonogov/pyinstaller-windows` both have few tags `:latest`, `:dev`.
 
-The `:latest` tag runs Python 3.10.6 x86-64.
+The `:latest` tag runs Python 3.10.7 x86-64.
 
 ## Usage
 
@@ -55,7 +55,7 @@ will generate a `spec` file for `your-script.py` in your current working directo
 
 ##### How do I change the PyInstaller version used?
 
-Add `pyinstaller=5.1.0` to your `requirements.txt`.
+Add `pyinstaller=5.2.0` to your `requirements.txt`.
 
 ##### Is it possible to use a package mirror?
 
@@ -69,6 +69,10 @@ None
 
 <details>
   <summary>2022</summary>
+
+#### [2.9] - upcoming
+
+- Updated Python 3.10.6 -> 3.10.7
 
 #### [2.8] - 2022-08-11
 
