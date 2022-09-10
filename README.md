@@ -4,7 +4,7 @@
 
 Current PyInstaller version used:
 
-- 5.3.0 for Python 3.10.7
+- 5.4.0 for Python 3.10.7
 
 ## Tags
 
@@ -73,6 +73,7 @@ None
 #### [2.9] - upcoming
 
 - Updated Python 3.10.6 -> 3.10.7
+- Updated Pyintaller 5.3.0 -> 5.4.0
 
 #### [2.8] - 2022-08-11
 
