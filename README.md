@@ -4,7 +4,7 @@
 
 Current PyInstaller version used:
 
-- 5.4.0 for Python 3.10.7
+- 5.4.1 for Python 3.10.7
 
 ## Tags
 
@@ -70,10 +70,14 @@ None
 <details>
   <summary>2022</summary>
 
-#### [2.9] - upcoming
+#### [3.0] - upcoming
 
+- Python is compiled from sources
+- Updated GitHub Actions (testing the image before push)
+- Optimized Dockerfiles
+- Updated OpenSSL 1.1.1q -> 3.0.4
 - Updated Python 3.10.6 -> 3.10.7
-- Updated Pyintaller 5.3.0 -> 5.4.0
+- Updated Pyintaller 5.3.0 -> 5.4.1
 
 #### [2.8] - 2022-08-11
 

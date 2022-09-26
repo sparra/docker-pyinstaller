@@ -1,7 +1,7 @@
 #!/bin/bash -i
 
 # Add path
-echo 'export PATH=$PATH:$HOME/.pyenv/versions/$(ls $HOME/.pyenv/versions/)/bin/' >> ~/.bashrc
+# echo 'export PATH=$PATH:$HOME/.pyenv/versions/$(ls $HOME/.pyenv/versions/)/bin/' >> ~/.bashrc
 
 # Fail on errors.
 set -e
@@ -34,7 +34,7 @@ fi
 cd $WORKDIR
 
 if [ -f requirements.txt ]; then
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 fi # [ -f requirements.txt ]
 
 echo "$@"
