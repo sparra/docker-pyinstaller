@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 SHELL ["/bin/bash", "-i", "-c"]
 
-LABEL maintainer="batonogov@icloud.com"
+LABEL maintainer="f.batonogov@yandex.ru"
 
 ARG PYTHON_VERSION=3.10.7
 ARG PYINSTALLER_VERSION=5.5.0

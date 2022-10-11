@@ -6,9 +6,9 @@ on:
       - 'dev'
 
 env:
-  TEST_TAG: batonogov/pyinstaller-windows:test
-  TAG: batonogov/pyinstaller-windows:dev
-  FILE: Dockerfile-py3-win64
+  TEST_TAG: batonogov/pyinstaller-linux:test
+  TAG: batonogov/pyinstaller-linux:dev
+  FILE: Dockerfile-py3-amd64
 
 jobs:
   docker:
