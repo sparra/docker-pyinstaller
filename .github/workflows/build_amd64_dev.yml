@@ -6,8 +6,9 @@ on:
       - 'dev'
 
 env:
-  TAG: batonogov/pyinstaller-linux:dev
-  FILE: Dockerfile-py3-amd64
+  TEST_TAG: batonogov/pyinstaller-windows:test
+  TAG: batonogov/pyinstaller-windows:dev
+  FILE: Dockerfile-py3-win64
 
 jobs:
   docker:
@@ -34,12 +35,12 @@ jobs:
         with:
           context: .
           load: true
-          tags: ${{ env.TAG }}
+          tags: ${{ env.TEST_TAG }}
           file: ${{ env.FILE }}
       -
         name: Test
         run: |
-          docker run --rm -v "$(pwd)/test/:/src/" ${{ env.TAG }} "pyinstaller --onefile hello.py"
+          docker run --rm -v "$(pwd)/test/:/src/" ${{ env.TEST_TAG }} "pyinstaller --onefile hello.py"
       -
         name: Build and push
         uses: docker/build-push-action@v3
