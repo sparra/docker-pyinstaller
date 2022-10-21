@@ -70,14 +70,14 @@ None
 <details>
   <summary>2022</summary>
 
-#### [3.0] - upcoming
+#### [2.9] - 2022-10-21
 
 - Python is compiled from sources
 - Updated GitHub Actions (testing the image before push)
-- Optimized Dockerfiles
-- Updated OpenSSL 1.1.1q -> 3.0.5
+- Removed OpenSSL
 - Updated Python 3.10.6 -> 3.10.8
 - Updated Pyintaller 5.3.0 -> 5.5.0
+- Optimized Dockerfiles
 
 #### [2.8] - 2022-08-11
 
