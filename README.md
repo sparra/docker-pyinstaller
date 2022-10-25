@@ -4,7 +4,7 @@
 
 Current PyInstaller version used:
 
-- 5.5.0 for Python 3.10.8
+- 5.6.0 for Python 3.10.8
 
 ## Tags
 
@@ -55,7 +55,7 @@ will generate a `spec` file for `your-script.py` in your current working directo
 
 ##### How do I change the PyInstaller version used?
 
-Add `pyinstaller=5.4.1` to your `requirements.txt`.
+Add `pyinstaller=5.5.0` to your `requirements.txt`.
 
 ##### Is it possible to use a package mirror?
 
@@ -69,6 +69,9 @@ None
 
 <details>
   <summary>2022</summary>
+
+#### [3.0] - upcoming
+- Updated Pyintaller 5.5.0 -> 5.6.0
 
 #### [2.9] - 2022-10-21
 
