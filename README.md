@@ -4,7 +4,7 @@
 
 Current PyInstaller version used:
 
-- 5.6.0 for Python 3.10.8
+- 5.6.1 for Python 3.10.8
 
 ## Tags
 
