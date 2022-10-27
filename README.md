@@ -4,14 +4,14 @@
 
 Current PyInstaller version used:
 
-- 5.6.1 for Python 3.10.8
+- 5.6.1 for Python 3.11.0
 
 ## Tags
 
 `batonogov/pyinstaller-linux` both have few tags `:latest`, `:dev`.
 `batonogov/pyinstaller-windows` both have few tags `:latest`, `:dev`.
 
-The `:latest` tag runs Python 3.10.8 x86-64.
+The `:latest` tag runs Python 3.11.0 x86-64.
 
 ## Usage
 
@@ -71,7 +71,8 @@ None
   <summary>2022</summary>
 
 #### [3.0] - upcoming
-- Updated Pyintaller 5.5.0 -> 5.6.0
+- Updated Pyintaller 5.5.0 -> 5.6.1
+- Updated Python 3.10.8 -> 3.11.0
 
 #### [2.9] - 2022-10-21
 
