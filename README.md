@@ -4,7 +4,7 @@
 
 Current PyInstaller version used:
 
-- 5.6.1 for Python 3.11.0
+- 5.6.2 for Python 3.11.0
 
 ## Tags
 
@@ -25,13 +25,13 @@ If the `src` folder has a `requirements.txt` file, the packages will be installe
 
 For example, in the folder that has your source code, `.spec` file and `requirements.txt`:
 
-```
+```console
 docker run -v "$(pwd):/src/" batonogov/pyinstaller-windows
 ```
 
 will build your PyInstaller project into `dist/`. The `.exe` file will have the same name as your `.spec` file.
 
-```
+```console
 docker run -v "$(pwd):/src/" batonogov/pyinstaller-linux
 ```
 
@@ -41,7 +41,7 @@ will build your PyInstaller project into `dist/`. The binary will have the same 
 
 You'll need to supply a custom command to Docker to install system pacakges. Something like:
 
-```
+```console
 docker run -v "$(pwd):/src/" --entrypoint /bin/sh batonogov/pyinstaller-linux -c "apt-get update -y && apt-get install -y wget && /entrypoint.sh"
 ```
 
@@ -71,7 +71,7 @@ None
   <summary>2022</summary>
 
 #### [3.0] - upcoming
-- Updated Pyintaller 5.5.0 -> 5.6.1
+- Updated Pyintaller 5.5.0 -> 5.6.2
 - Updated Python 3.10.8 -> 3.11.0
 
 #### [2.9] - 2022-10-21
