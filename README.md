@@ -68,11 +68,18 @@ None
 ## History
 
 <details>
-  <summary>2022</summary>
+ <summary>2023</summary>
 
-#### [3.0] - upcoming
+#### [3.0.0] - 01.01.2023
+
+- Semver now
 - Updated Pyintaller 5.5.0 -> 5.7.0
 - Updated Python 3.10.8 -> 3.11.1
+
+</details>
+
+<details>
+  <summary>2022</summary>
 
 #### [2.9] - 2022-10-21
 
