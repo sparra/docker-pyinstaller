@@ -2,10 +2,8 @@ name: CI WIN64
 
 on:
   push:
-    branches: 
-      - 'dev'
-  # pull_request:
-  #   branches: [ "master" ]
+    branches:
+      - '**'
 
 env:
   DOCKERFILE: Dockerfile-py3-win64
