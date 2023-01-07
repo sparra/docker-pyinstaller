@@ -1,4 +1,4 @@
-name: CI WIN64
+name: CI WINDOWS
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - '**'
 
 env:
-  DOCKERFILE: Dockerfile-py3-win64
+  DOCKERFILE: Dockerfile-py3-windows
 
 jobs:
 

@@ -72,6 +72,7 @@ None
 #### [3.0.1] - upcoming
 
 - New GitHub CI
+- Added arm64 architecture in linux images
 
 #### [3.0.0] - 01.01.2023
 

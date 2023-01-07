@@ -1,4 +1,4 @@
-name: CI AMD64
+name: CI LINUX
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - '**'
 
 env:
-  DOCKERFILE: Dockerfile-py3-amd64
+  DOCKERFILE: Dockerfile-py3-linux
 
 jobs:
 
@@ -44,6 +44,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
+          platforms: linux/amd64, linux/arm64
           file: ${{ env.DOCKERFILE }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
