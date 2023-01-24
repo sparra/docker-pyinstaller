@@ -1,17 +1,27 @@
-name: CI AMD64
+name: CI LINUX
 
 on:
   push:
-    branches: 
-      - 'dev'
-  # pull_request:
-  #   branches: [ "master" ]
+    branches:
+      - '**'
 
 env:
-  DOCKERFILE: Dockerfile-py3-amd64
+  DOCKERFILE: Dockerfile-py3-linux
 
 jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Run Tests
+        run: |
+          echo "Building image to test"
+          ./build-and-test.sh ${{ env.DOCKERFILE }}
+
   build_and_push_to_registry:
+    needs: test
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
@@ -30,10 +40,14 @@ jobs:
         with:
           images: batonogov/pyinstaller-linux
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
           context: .
+          platforms: linux/amd64, linux/arm64
           file: ${{ env.DOCKERFILE }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
