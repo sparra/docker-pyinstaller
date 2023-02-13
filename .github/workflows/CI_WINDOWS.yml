@@ -43,7 +43,7 @@ jobs:
         with:
           images: ${{ env.IMAGE_NAME }}
 
-      - name: Build and push Docker image
+      - name: Build and push Docker image (branch)
         uses: docker/build-push-action@v3
         with:
           context: .
@@ -51,7 +51,6 @@ jobs:
           push: true
           tags: |
             ${{ steps.meta.outputs.tags }} 
-            ${{ env.IMAGE_NAME }}:dev
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker image (release)
@@ -61,7 +60,6 @@ jobs:
           context: .
           platforms: |
             linux/amd64
-            linux/arm64
           file: ${{ env.DOCKERFILE }}
           push: true
           tags: |

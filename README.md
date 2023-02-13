@@ -2,15 +2,16 @@
 
 **batonogov/pyinstaller-linux** and **batonogov/pyinstaller-windows** are a pair of Docker containers to ease compiling Python applications to binaries / exe files.
 
-Current PyInstaller version used:
-
-- 5.7.0 for **Python 3.11.1**
-
 ## Tags
 
-`batonogov/pyinstaller-linux` or `batonogov/pyinstaller-windows` both have few tags `:latest`, `:dev`, `:3.0.1`.
+`batonogov/pyinstaller-linux` or `batonogov/pyinstaller-windows` both have few tags:
 
-The `:latest` tag runs Python 3.11.1.
+| TAG                   | Python version | Pyinstaller version |
+| --------------------- | -------------- | ------------------- |
+| `:latest` or `:3.0.2` | 3.11.2         | 5.8.0               |
+| `:3.0.1`              | 3.11.1         | 5.7.0               |
+| `:python-3.10`        | 3.10.10        | 5.7.0               |
+| `:dev`                | See dev branch | See dev branch      |
 
 ## Usage
 
@@ -41,7 +42,7 @@ will build your PyInstaller project into `dist/`. The binary will have the same 
 You'll need to supply a custom command to Docker to install system pacakges. Something like:
 
 ```console
-docker run -v "$(pwd):/src/" --entrypoint /bin/sh batonogov/pyinstaller-linux -c "apt-get update -y && apt-get install -y wget && /entrypoint.sh"
+docker run -v "$(pwd):/src/" --entrypoint /bin/sh batonogov/pyinstaller-linux -c "apt update -y && apt install -y wget && /entrypoint.sh"
 ```
 
 Replace `wget` with the dependencies / package(s) you need to install.
@@ -54,7 +55,7 @@ will generate a `spec` file for `your-script.py` in your current working directo
 
 ### How do I change the PyInstaller version used?
 
-Add `pyinstaller=5.5.0` to your `requirements.txt`.
+Add `pyinstaller=5.7.0` to your `requirements.txt`.
 
 ### Is it possible to use a package mirror?
 
@@ -67,6 +68,12 @@ None
 ## History
 
 ### 2023
+
+#### [3.0.2] - 13.02.2023
+
+- Updated Python 3.11.1 -> 3.11.2
+- Updated Ubuntu 20.04 -> 22.04 for windows
+- Updated Pyintaller 5.7.0 -> 5.8.0
 
 #### [3.0.1] - 24.01.2023
 
