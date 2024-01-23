@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: pull-request
+      - name: Auto Pull Request
         uses: diillson/auto-pull-request@v1.0.1
         with:
-            destination_branch: "main"
+          destination_branch: "main"
