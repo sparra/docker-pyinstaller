@@ -1,10 +1,10 @@
 name: AURO PR
 
 on:
-    push:
-      branches:
-        - '*'
-        - '!main'
+  push:
+    branches:
+      - '*'
+      - '!main'
 
 jobs:
   pull-request:
