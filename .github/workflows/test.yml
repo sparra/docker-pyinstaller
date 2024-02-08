@@ -1,0 +1,38 @@
+name: tests
+
+on:
+  push:
+    branches:
+      - '*'
+      - '!main'
+
+jobs:
+  windows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Run Tests
+        run: |
+          echo "Building image to test"
+          ./build-and-test.sh Dockerfile-py3-windows
+
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Run Tests
+        run: |
+            echo "Building image to test"
+            ./build-and-test.sh Dockerfile-py3-linux
+
+  osx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Run Tests
+        run: |
+            echo "Building image to test"
+            ./build-and-test.sh Dockerfile-py3-osx
