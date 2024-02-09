@@ -24,8 +24,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: Dockerfile-py3-linux
+          file: ./Dockerfile-py3-linux
           platforms: |
             linux/i386
             linux/amd64
