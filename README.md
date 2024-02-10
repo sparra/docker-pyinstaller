@@ -57,7 +57,7 @@ You'll need to pass an environment variable called `SPECFILE` with the path (rel
 docker run \
   --volume "$(pwd):/src/" \
   --env SPECFILE=./main-nogui.spec \
-  batonogov/pyinstaller-linux
+  batonogov/pyinstaller-linux:latest
 ```
 
 This will build the executable from the spec file `main-nogui.spec`.
@@ -69,7 +69,7 @@ You'll need to supply a custom command to Docker to install system pacakges. Som
 ```sh
 docker run \
   --volume "$(pwd):/src/" \
-  --entrypoint /bin/sh batonogov/pyinstaller-linux \
+  --entrypoint /bin/sh batonogov/pyinstaller-linux:latest \
   -c "apt update -y && apt install -y wget && /entrypoint.sh"
 ```
 
