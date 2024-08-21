@@ -11,6 +11,7 @@ on:
       - v*.*.*
     branches:
       - main
+  pull_request:
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -30,13 +31,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4.1.6
+        uses: actions/checkout@v4.1.7
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
-        if: github.event_name != 'pull_request'
-        uses: sigstore/cosign-installer@v3.5.0
+        uses: sigstore/cosign-installer@v3.6.0
         with:
           cosign-release: v2.2.4
 
@@ -49,8 +49,7 @@ jobs:
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
       - name: Log into registry ${{ env.REGISTRY }}
-        if: github.event_name != 'pull_request'
-        uses: docker/login-action@v3.1.0
+        uses: docker/login-action@v3.3.0
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
@@ -66,9 +65,9 @@ jobs:
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
-      - name: Build and push slim Docker image
-        id: build-slim-and-push
-        uses: docker/build-push-action@v5.3.0
+      - name: Build and push slim bookworm Docker image
+        id: build-slim-bookworm-and-push
+        uses: docker/build-push-action@v6.7.0
         with:
           context: .
           file: Dockerfile-py3-linux-slim
@@ -80,15 +79,43 @@ jobs:
             linux/arm64/v8
             linux/ppc64le
             linux/s390x
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}-slim
-          labels: ${{ steps.meta.outputs.labels }}
+          push: true
+          build-args: PYTHON_VERSION=3.12.4-slim-bookworm
+          tags: |
+            ${{ steps.meta.outputs.tags }}-slim
+            ${{ steps.meta.outputs.tags }}-slim-bookworm
+          labels: |
+            ${{ steps.meta.outputs.labels }}-slim
+            ${{ steps.meta.outputs.labels }}-slim-bookworm
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Build and push Docker image
-        id: build-and-push
-        uses: docker/build-push-action@v5.3.0
+      - name: Build and push slim bullseye Docker image
+        id: build-slim-bullseye-and-push
+        uses: docker/build-push-action@v6.7.0
+        with:
+          context: .
+          file: Dockerfile-py3-linux-slim
+          platforms: |
+            linux/amd64
+            linux/arm64
+            linux/arm/v5
+            linux/arm/v7
+            linux/arm64/v8
+            linux/ppc64le
+            linux/s390x
+          push: true
+          build-args: PYTHON_VERSION=3.12.4-slim-bullseye
+          tags: |
+            ${{ steps.meta.outputs.tags }}-slim-bullseye
+          labels: |
+            ${{ steps.meta.outputs.labels }}-slim-bullseye
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push bookworm Docker image
+        id: build-bookworm-and-push
+        uses: docker/build-push-action@v6.7.0
         with:
           context: .
           file: Dockerfile-py3-linux
@@ -100,8 +127,36 @@ jobs:
             linux/arm64/v8
             linux/ppc64le
             linux/s390x
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          push: true
+          build-args: PYTHON_VERSION=3.12.4-bookworm
+          tags: |
+            ${{ steps.meta.outputs.tags }}
+            ${{ steps.meta.outputs.tags }}-bookworm
+          labels: |
+            ${{ steps.meta.outputs.labels }}
+            ${{ steps.meta.outputs.labels }}-bookworm
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push bullseye Docker image
+        id: build-bullseye-and-push
+        uses: docker/build-push-action@v6.7.0
+        with:
+          context: .
+          file: Dockerfile-py3-linux
+          platforms: |
+            linux/amd64
+            linux/arm64
+            linux/arm/v5
+            linux/arm/v7
+            linux/arm64/v8
+            linux/ppc64le
+            linux/s390x
+          push: true
+          build-args: PYTHON_VERSION=3.12.4-bullseye
+          tags: |
+            ${{ steps.meta.outputs.tags }}-bullseye
+          labels: |
+            ${{ steps.meta.outputs.labels }}-bullseye
           cache-from: type=gha
           cache-to: type=gha,mode=max
