@@ -1,7 +1,7 @@
 windows_bin:
   stage: deploy
   image:
-    name: batonogov/pyinstaller-windows:latest
+    name: sparra/pyinstaller-windows:latest
     entrypoint: ['']
   script:
     - echo "Creating Windows artifact"
@@ -19,7 +19,7 @@ windows_bin:
 linux_bin:
   stage: deploy
   image:
-    name: batonogov/pyinstaller-linux:latest
+    name: sparra/pyinstaller-linux:latest
     entrypoint: ['']
   script:
     - echo "Creating Linux artifact"
@@ -36,7 +36,7 @@ linux_bin:
 linux_slim_bin:
   stage: deploy
   image:
-    name: batonogov/pyinstaller-linux:latest-slim
+    name: sparra/pyinstaller-linux:latest-slim
     entrypoint: ['']
   script:
     - echo "Creating Linux artifact"
